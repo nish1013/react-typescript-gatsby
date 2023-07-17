@@ -1,5 +1,11 @@
 # Frontend code test
 
+## How to run the app
+Run below command to start a dev server.
+More info check [Gatsby quick start guide](https://www.gatsbyjs.com/docs/quick-start/)
+```
+gatsby develop
+```
 
 Please recreate the supplied designs in the following Figma document as a responsive browser-based component.
 
