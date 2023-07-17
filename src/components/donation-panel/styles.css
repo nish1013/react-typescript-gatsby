@@ -1,0 +1,22 @@
+.Button {
+  color: cadetblue;
+}
+
+.DonationPanel {
+  background-color: #e9edeb;
+  color: #2f4e37;
+}
+
+.Button {
+  border-color: #2f4e37;
+  color: #2f4e37;
+}
+
+.Button:hover {
+  border-color: #2f4e37;
+  background-color: #2f4e37;
+}
+
+.DonateButton {
+  color: #2f4e37;
+}
