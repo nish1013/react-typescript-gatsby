@@ -1,13 +1,23 @@
 import * as React from "react"
 import "./styles.css";
 import PaymentOptions from "../payment-options/PaymentOptions";
+import Amount from "./Amount";
 
 export default function DonationPanel() {
+  const singleAmounts = [5,10,20,50];
+  const regularAmounts = [5,10];
+  const singleType = 'single';
+  const regularType = 'regular';
+  const [type, setType] = React.useState(singleType);
+  const [amountSelected, setAmountSelected] = React.useState(Math.max(...singleAmounts));
+  const updateType = (type) => setType(type);
+  const amounts = type === regularType ? regularAmounts : singleAmounts;
+
   //TODO organise tailwindcss
-  const classRegular =
-    "Button min-w-1/4 border hover:text-white font-bold my-2 mx-2 py-2 px-4 rounded-full";
-  const classValueBtns =
-    "Button min-w-1/8 border hover:text-white font-bold mx-2 py-2 px-4 rounded-full";
+  const classType =
+    "Button min-w-1/4 border font-bold my-2 mx-2 py-2 px-4 rounded-full";
+  const classTypeSelected = "Button-selected min-w-1/4 border text-white font-bold my-2 mx-2 py-2 px-4 rounded-full";
+    
   const classDonateBtn =
     "DonateButton w-1/2 self-center bg-amber-400 hover:bg-amber-500 font-bold my-4 py-4 px-4 rounded-full";
   return (
@@ -18,14 +28,14 @@ export default function DonationPanel() {
       <p className="py-2">Do something amazing</p>
       </div>
       <div className="flex justify-center">
-        <button className={classRegular}>Single</button>
-        <button className={classRegular}>Regular</button>
+        <div className={type === singleType ? classTypeSelected: classType} onClick={() => {updateType(singleType); setAmountSelected(Math.max(...singleAmounts))}}>Single</div>
+        <div className={type === regularType ? classTypeSelected: classType} onClick={() => {updateType(regularType);setAmountSelected(Math.max(...regularAmounts))}}>Regular</div>
       </div>
       <div className="flex justify-center">
-        <button className={classValueBtns}>£5</button>
-        <button className={classValueBtns}>£10</button>
-        <button className={classValueBtns}>£20</button>
-        <button className={classValueBtns}>£50</button>
+        {
+        amounts.map(
+          (amount) => (<Amount key={amount} amount={amount} selected={amount === amountSelected} onClickBtn={() => setAmountSelected(amount)}/>)
+          )}
       </div>
       <button className={classDonateBtn}>Donate</button>
       <PaymentOptions />
