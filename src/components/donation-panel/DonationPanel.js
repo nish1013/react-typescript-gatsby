@@ -23,9 +23,9 @@ export default function DonationPanel() {
   return (
     <div className="DonationPanel flex flex-col justify-center py-40 px-8 w-full md:w-1/2 md:h-screen">
      <div className="flex flex-col items-center">
-      <h1 className="text-4xl font-bold">Make a</h1>
-      <h1 className="text-4xl font-bold">donation</h1>
-      <p className="py-2">Do something amazing</p>
+      <h1 className="Title text-5xl font-bold">Make a</h1>
+      <h1 className="Title text-5xl font-bold">donation</h1>
+      <p className="Slogan py-2 text-2xl">Do something amazing</p>
       </div>
       <div className="flex justify-center">
         <div className={type === singleType ? classTypeSelected: classType} onClick={() => {updateType(singleType); setAmountSelected(Math.max(...singleAmounts))}}>Single</div>
