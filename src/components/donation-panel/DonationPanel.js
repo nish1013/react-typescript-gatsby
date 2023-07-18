@@ -19,7 +19,7 @@ export default function DonationPanel() {
   const classTypeSelected = "Button-selected min-w-1/4 border text-white font-bold my-2 mx-2 py-3 px-10 rounded-full";
     
   const classDonateBtn =
-    "DonateButton w-1/4 self-center bg-amber-400 hover:bg-amber-500 font-bold my-4 py-4 px-4 rounded-full";
+    "DonateButton w-64 self-center bg-amber-400 hover:bg-amber-500 font-bold my-4 py-4 px-4 rounded-full";
   return (
     <div className="DonationPanel flex flex-col justify-center py-40 px-8 w-full">
      <div className="flex flex-col items-center">
