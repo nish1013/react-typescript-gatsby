@@ -5,7 +5,7 @@ import Amount from "./Amount";
 
 export default function DonationPanel() {
   const singleAmounts = [5,10,20,50];
-  const regularAmounts = [5,10];
+  const regularAmounts = [10, 20, 30, 40];
   const singleType = 'single';
   const regularType = 'regular';
   const [type, setType] = React.useState(singleType);
@@ -15,8 +15,8 @@ export default function DonationPanel() {
 
   //TODO organise tailwindcss
   const classType =
-    "Button min-w-1/4 border font-bold my-2 mx-2 py-2 px-4 rounded-full";
-  const classTypeSelected = "Button-selected min-w-1/4 border text-white font-bold my-2 mx-2 py-2 px-4 rounded-full";
+    "Button min-w-1/4 border font-bold my-2 mx-2 py-3 px-10 rounded-full";
+  const classTypeSelected = "Button-selected min-w-1/4 border text-white font-bold my-2 mx-2 py-3 px-10 rounded-full";
     
   const classDonateBtn =
     "DonateButton w-1/2 self-center bg-amber-400 hover:bg-amber-500 font-bold my-4 py-4 px-4 rounded-full";
