@@ -7,6 +7,9 @@ More info check [Gatsby quick start guide](https://www.gatsbyjs.com/docs/quick-s
 ```
 gatsby develop
 ```
+##  How to view the app:
+You may use the below URL to see the running app: 
+https://donations.gatsbyjs.io/
 
 ## Mobile Design
 
@@ -22,3 +25,4 @@ gatsby develop
 Switching between Single and Regular giving should show different donation amounts.
 
 The component comes in 2 variations.
+
