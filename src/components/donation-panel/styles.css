@@ -1,0 +1,37 @@
+.Title {
+  font-family: DMSans-Bold
+}
+
+.Slogan {
+  font-family: DMSans-Regular
+}
+
+.DonationPanel {
+  background-color: #e9edeb;
+  color: #2f4e37;
+  font-family: DMSans-Medium
+}
+
+.Button {
+  border-color: #2f4e37;
+  color: #2f4e37;
+  cursor: pointer;
+  background-color: white;
+}
+
+.Button:hover {
+  border-color: #2f4e37;
+  background-color: #e9edeb;
+  color: #2f4e37;
+}
+
+.Button-selected {
+  border-color: #2f4e37;
+  background-color: #2f4e37;
+  cursor: pointer;
+}
+
+
+.DonateButton {
+  color: #2f4e37;
+}
