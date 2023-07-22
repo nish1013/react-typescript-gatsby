@@ -22,4 +22,3 @@ gatsby develop
 Switching between Single and Regular giving should show different donation amounts.
 
 The component comes in 2 variations.
-
